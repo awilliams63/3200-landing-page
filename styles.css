@@ -1,0 +1,279 @@
+/* ============================================
+   GLOBAL RESET & BASE STYLES
+   ============================================ */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, system-ui, sans-serif;
+    background-color: #ffffff;
+    color: #1a1a1a;
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+/* ============================================
+   SHARED CONTAINER
+   ============================================ */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ============================================
+   SECTION HEADINGS
+   ============================================ */
+h2 {
+    font-size: 1.75rem;
+    color: #2c5f8a;
+    margin-bottom: 24px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e8f0f7;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.hero {
+    background-color: #f4f8fc;
+    padding: 80px 24px;
+    text-align: center;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Headshot placeholder — shows a grey circle if image is missing */
+.headshot {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #d0dce8;
+    border: 4px solid #2c5f8a;
+    /* Fallback color visible when image doesn't load */
+    display: block;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    letter-spacing: 0.5px;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: #2c5f8a;
+    font-style: italic;
+}
+
+/* ============================================
+   BIO SECTION
+   ============================================ */
+.bio {
+    padding: 64px 0;
+    background-color: #ffffff;
+}
+
+.bio p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 16px;
+    max-width: 780px;
+}
+
+/* ============================================
+   SKILLS SECTION
+   ============================================ */
+.skills {
+    padding: 64px 0;
+    background-color: #f4f8fc;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+}
+
+.skill-card {
+    background-color: #ffffff;
+    border: 1px solid #dce8f0;
+    border-radius: 8px;
+    padding: 28px;
+}
+
+.skill-card h3 {
+    font-size: 1.05rem;
+    color: #2c5f8a;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.skill-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-card ul li {
+    padding: 6px 0;
+    border-bottom: 1px solid #f0f4f8;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+.skill-card ul li:last-child {
+    border-bottom: none;
+}
+
+/* ============================================
+   PROJECTS SECTION
+   ============================================ */
+.projects {
+    padding: 64px 0;
+    background-color: #ffffff;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.project-card {
+    background-color: #ffffff;
+    border: 1px solid #dce8f0;
+    border-radius: 8px;
+    padding: 28px;
+    transition: box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    box-shadow: 0 4px 16px rgba(44, 95, 138, 0.12);
+}
+
+.project-card h3 {
+    font-size: 1.1rem;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+}
+
+.project-card p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 16px;
+}
+
+/* Tag pills under each project */
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.project-tags span {
+    background-color: #e8f0f7;
+    color: #2c5f8a;
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+/* ============================================
+   CONTACT SECTION
+   ============================================ */
+.contact {
+    padding: 64px 0;
+    background-color: #f4f8fc;
+}
+
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #2c5f8a;
+    background-color: #ffffff;
+    border: 1px solid #dce8f0;
+    border-radius: 8px;
+    padding: 14px 22px;
+    font-size: 0.95rem;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-link:hover {
+    background-color: #2c5f8a;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(44, 95, 138, 0.2);
+}
+
+.contact-icon {
+    font-weight: bold;
+    font-size: 0.9rem;
+    background-color: #2c5f8a;
+    color: #ffffff;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background-color 0.2s ease;
+}
+
+.contact-link:hover .contact-icon {
+    background-color: #ffffff;
+    color: #2c5f8a;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer {
+    text-align: center;
+    padding: 24px;
+    background-color: #1a1a1a;
+    color: #aaa;
+    font-size: 0.85rem;
+}
+
+/* ============================================
+   RESPONSIVE — MOBILE
+   ============================================ */
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    .contact-links {
+        flex-direction: column;
+    }
+
+    .contact-link {
+        width: 100%;
+    }
+}
